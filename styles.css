@@ -362,6 +362,10 @@
     --orange: hsl(25, 97%, 53%);
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
     background-color: var(--very-dark-blue);
     font-family: 'Overpass', sans-serif;
@@ -374,13 +378,16 @@ body {
 }
 
 .container {
-    max-width: 350px;
+    max-width: 300px;
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: var(--new-dark-blue);
     margin: auto;
     padding: 2rem;
     border-radius: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .container h1 {
@@ -488,11 +495,17 @@ button:hover {
   text-align: center;
 }
 
-.centered-container span {
+.user-vote {
   margin-top: 2rem;
   padding: .4rem 1rem;
   border-radius: 1rem;
   color:var(--orange);
   background-color: var(--dark-blue);
   font-size: .9rem;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
 }

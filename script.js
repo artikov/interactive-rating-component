@@ -23,11 +23,15 @@ function toggleItem(elem) {
 const button = document.querySelector('button')
 const rate = document.querySelector('#rate')
 const response = document.querySelector('#response')
-const vote = document.querySelector('.rb-tab-active')
+const voteEl = document.getElementsByClassName('rb-tab-active')
+const voteSpan = document.querySelector('.vote-value')
 
 button.addEventListener('click', function(e){
+    const vote = voteEl[0].attributes[1].textContent
     response.classList.remove('hidden')
     rate.classList.add('hidden')
+    voteSpan.innerHTML = vote
+
     e.preventDefault()
-    console.log(vote)
+
 })
