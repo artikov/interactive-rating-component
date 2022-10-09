@@ -18,3 +18,16 @@ function toggleItem(elem) {
     };
   }
   toggleItem(document.querySelectorAll('.rb-spot'));
+
+//   Hide & show content
+const button = document.querySelector('button')
+const rate = document.querySelector('#rate')
+const response = document.querySelector('#response')
+const vote = document.querySelector('.rb-tab-active')
+
+button.addEventListener('click', function(e){
+    response.classList.remove('hidden')
+    rate.classList.add('hidden')
+    e.preventDefault()
+    console.log(vote)
+})
